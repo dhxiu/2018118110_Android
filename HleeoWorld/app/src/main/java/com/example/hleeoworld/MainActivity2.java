@@ -64,7 +64,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         super.onDestroy();
         m=m+1;
-        System.out.println("销毁活动回调 "+m);
+        System.out.println(" destroy activity "+m);
     }
     @Override
     protected  void onRestart() {
