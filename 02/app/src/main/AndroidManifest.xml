@@ -11,8 +11,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".singleTop"
-            android:launchMode="singleTop"
-            android:label="This is singleton模式">
+            android:launchMode="singleTask"
+            android:label="This is singleTask模式">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

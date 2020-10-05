@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.Button;
 
 public class Standard extends AppCompatActivity {
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("Standard","onDestroy");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

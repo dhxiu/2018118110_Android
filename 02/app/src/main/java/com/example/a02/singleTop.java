@@ -1,5 +1,6 @@
 package com.example.a02;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +10,12 @@ import android.view.View;
 import android.widget.Button;
 
 public class singleTop extends AppCompatActivity {
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("singTop","onRestart");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
