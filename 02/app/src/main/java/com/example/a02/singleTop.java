@@ -20,7 +20,7 @@ public class singleTop extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("singTop",this.toString());
+        Log.d("singTop","Task id is"+getTaskId());
         setContentView(R.layout.activity_single_top);
         Button button2=(Button) findViewById(R.id.button_2);
         button2.setOnClickListener(new View.OnClickListener() {

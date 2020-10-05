@@ -10,9 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ThirdActivity"
+            android:label="This is cd">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".singleTop"
-            android:launchMode="singleTask"
-            android:label="This is singleTask模式">
+            android:label="This is singleTask模式"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +30,8 @@
         </activity>
         <activity
             android:name=".Standard"
-            android:label="标准模式"
-            android:launchMode="standard">
+            android:label="My app"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

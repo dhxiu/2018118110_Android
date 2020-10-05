@@ -18,13 +18,13 @@ public class Standard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("Standard",this.toString());
+        Log.d("Standard","Task id is"+getTaskId());
         setContentView(R.layout.activity_standard);
         Button button1=(Button) findViewById(R.id.button_1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Standard.this,singleTop.class);
+                Intent intent=new Intent(Standard.this,ThirdActivity.class);
                 startActivity(intent);
             }
         });
