@@ -24,7 +24,7 @@ public class Standard extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Standard.this,ThirdActivity.class);
+                Intent intent=new Intent(Standard.this,singleTop.class);
                 startActivity(intent);
             }
         });

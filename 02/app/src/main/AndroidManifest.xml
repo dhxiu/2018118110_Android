@@ -20,8 +20,8 @@
         </activity>
         <activity
             android:name=".singleTop"
-            android:label="This is singleTask模式"
-            android:launchMode="singleTask">
+            android:label="This is singleTop模式"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,7 +31,7 @@
         <activity
             android:name=".Standard"
             android:label="My app"
-            android:launchMode="singleInstance">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
