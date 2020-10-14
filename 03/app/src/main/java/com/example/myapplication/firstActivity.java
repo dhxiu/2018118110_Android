@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -20,6 +21,10 @@ public class firstActivity<finishActivity> extends AppCompatActivity implements 
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_first);
         setContentView(R.layout.activity_first);
+        ActionBar actionBar=getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
         Button button = (Button) findViewById(R.id.button);
         editText = (EditText) findViewById(R.id.edit_text);
         imageView = (ImageView) findViewById(R.id.image_view);
