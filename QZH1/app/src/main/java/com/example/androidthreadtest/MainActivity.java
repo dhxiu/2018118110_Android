@@ -5,9 +5,12 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 
 import android.view.Menu;
@@ -17,6 +20,21 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView text;
+    public static final int UPDATE_TEXT =1;
+    private Handler handler = new Handler(){
+
+        public void handleMessage(Message msg){
+            switch (msg.what){
+                case UPDATE_TEXT:
+                    //在这里可以进行UI操作
+                    text.setText("Nice to meet you");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        text.setText("Nice to meet you");
+                        Message message = new Message();
+                        message.what=UPDATE_TEXT;
+                        handler.sendMessage(message);
                     }
                 }).start();
                 break;
