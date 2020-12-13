@@ -1,5 +1,6 @@
 package com.example.servicetest;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button startService = (Button) findViewById(R.id.start_service);
+        Button stopService = (Button) findViewById(R.id.stop_service);
+        startService.setOnClickListener(this);
+        stopService.setOnClickListener(this);
     }
 
 
@@ -29,6 +33,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.start_service:
+                Intent startIntent = new Intent(this,MyService.class);
+                startService(startIntent);
+                break;
+            case R.id.stop_service:
+                Intent stopIntent = new Intent(this,MyService.class);
+                stopService(stopIntent);
+                break;
+            default:
+                break;
         }
     }
 }
